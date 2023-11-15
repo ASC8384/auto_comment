@@ -577,12 +577,6 @@ def main(opts=None):
         opts['logger'].debug('N value after executing sunbw(): %s', N)
         N = No(opts)
         opts['logger'].debug('N value after executing No(): %s', N)
-    if N['待追评'] != 0:
-       opts['logger'].info("2.开始追评！")
-       N = review(N, opts)
-       opts['logger'].debug('N value after executing review(): %s', N)
-       N = No(opts)
-       opts['logger'].debug('N value after executing No(): %s', N)
     if N['服务评价'] != 0:
         opts['logger'].info('3.开始服务评价')
         N = Service_rating(N, opts)
